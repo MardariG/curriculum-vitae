@@ -13,16 +13,12 @@
   p { margin: 0 0 8px; text-align: justify; }
   ul { margin: 0 0 8px 0; padding-left: 20px; }
   li { margin-bottom: 3px; }
-  .c { background: #fff3a8; border-bottom: 1px dashed #b08a00; padding: 0 2px; font-style: italic; }
-  .note { border: 1px solid #b08a00; background: #fffbe0; padding: 8px 12px; margin-bottom: 16px; font-size: 9.5pt; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0 10px; font-size: 9.6pt; }
   th, td { border: 1px solid #ccc; padding: 4px 7px; text-align: left; vertical-align: top; }
   th { background: #f3e9ef; }
 </style>
 </head>
 <body>
-
-<div class="note"><b>Before submitting (delete this box):</b> Fill in every highlighted <span class="c">[CONFIRM: …]</span> with your real details, or delete the sentence if it doesn't apply. Canonical will ask about these answers in later interviews, so every claim must be accurate. Your name, email, phone and links have been left out, as Canonical asks; keep the filename neutral as well.</div>
 
 <h1>Written Interview</h1>
 <p class="sub">Web Frontend Engineer – JS, CSS, React, Flutter</p>
@@ -31,128 +27,144 @@
 <h2>1. Web engineering experience</h2>
 
 <h3>What skill or knowledge have you acquired in the past year that has been particularly helpful?</h3>
-<p>Over the past year I have gone deep into <b>React Native and mobile performance engineering</b>. I designed and built, end to end, a cross-platform crypto markets and portfolio app for iOS and Android from one TypeScript codebase. It has live market data over WebSockets, interactive price charts, portfolio tracking, and price alerts with push notifications. To make it feel native I had to learn how the JavaScript thread, the UI thread and the bridge interact. The tools I used were the Hermes engine, cold-start optimisation, list virtualisation, strict re-render control, and gesture-driven 60fps animations with Reanimated and Gesture Handler. I also automated builds and distribution with EAS and TestFlight, and covered the app with Jest and React Native Testing Library.</p>
+<p>The most useful thing I have learned this year is how to use <b>AI properly as an engineering tool</b>, beyond simple autocomplete. I use Claude and GitHub Copilot every day and I work with agentic workflows. In these, the AI explores a codebase, proposes a plan, makes changes across several files and runs the tests, while I steer, review and decide. I have also learned how to design applications that use large language models: prompt and context design, tool use, structured outputs, evaluation, and the security and cost trade-offs. I am currently preparing for the Claude Certified Architect certification to make this knowledge structured and complete rather than something I picked up casually.</p>
 
 <h3>What motivated you to learn it?</h3>
-<p>For eight years I worked mainly in the browser. I realised that most users now reach products from a phone first, and I wanted my React knowledge to be cross-platform. I also wanted a project I owned completely: architecture, build pipeline, release and maintenance, not only one feature area of a large client codebase. Building in fintech, which I know well from payments work, let me focus on the hard engineering problems, mainly real-time data and smooth rendering under load. This interest in one codebase serving several platforms is also why Canonical's Flutter direction caught my attention.</p>
+<p>I could see that AI was changing how software is built faster than any technology I have seen in my career. Many developers use it badly, either accepting its output blindly or ignoring it completely. I wanted to understand it well enough to get real value from it while keeping the quality bar high. As a Dev Lead I also felt responsible for this: if my team was going to use these tools, I needed to know where they help, where they fail, and how to review their output. Studying for a certification gave me a disciplined way to cover the parts I would not meet in daily work, such as evaluation and architecture of AI-based systems.</p>
 
 <h3>What has the impact been for you and your team?</h3>
-<p>For me, it changed how I think about rendering cost. On mobile every unnecessary re-render is visible as dropped frames, so I measure first and optimise second. I now bring that discipline back into my web work as Dev Lead on Adobe Workfront's Document Management area: memoisation boundaries, virtualised lists for large document sets, and watching bundle size and main-thread work. I share these practices in code reviews and in mentoring the developers on my team. <span class="c">[CONFIRM: add one concrete example, e.g. "I introduced list virtualisation for the document list, which cut render time from X to Y", or a talk/knowledge-sharing session you gave]</span></p>
+<p>For me, the biggest change is speed in the parts of the work that used to be slow but not difficult: understanding unfamiliar legacy code, writing test scaffolding, migrating repetitive patterns, and drafting documentation. That leaves more of my time for architecture, code review and the hard problems. It also helped my personal projects. As one engineer, I built and released a product on the web, Android and iOS, together with its back end, which would have taken much longer before.</p>
+<p>For my team, I share what works and what doesn't: how to give the AI the right context, and why every AI-generated change goes through the same code review and tests as human code. We also agreed never to put client secrets or confidential data into prompts. The result is that we use AI to move faster without lowering quality, and the less experienced developers learn to treat it as a pair programmer whose work they must check, not as an oracle.</p>
 
 <h3>Describe your experience of web programming – JavaScript, TypeScript, React, CSS and Python in particular.</h3>
-<p><b>JavaScript (9 years).</b> JavaScript has been my main language since 2017, from ES5/ES6 on the Western Union merchant portal up to ES2024 on Adobe Workfront today. I am comfortable with the language in depth: closures, the event loop and asynchronous patterns (promises, async/await, RxJS observables), modules, and tooling such as Webpack, Babel and ESLint.</p>
-<p><b>TypeScript.</b> I use TypeScript daily. All my Angular projects (Fiserv, Cisco Webex, Hudson MX) were strictly typed, and so is my React Native app. I use types as documentation and as a safety net for API contracts, for example by modelling payment states as discriminated unions so that impossible states cannot be represented.</p>
-<p><b>React.</b> At Adobe Workfront I lead front-end development on React, Redux, React Router and React Spectrum, Adobe's accessible design system, in a large shared codebase serving enterprise customers. At Mastercard I worked with React, GraphQL/Apollo and Ant Design on a payments management suite. There I untangled long-standing technical debt and delivered critical features on a dynamic form engine that reshapes the payment form per client. I also have strong Angular experience (Angular 5 through modern versions, NgRx, RxJS), which gives me a useful comparison of the two ecosystems' approaches to state and change detection.</p>
-<p><b>CSS.</b> I write CSS by hand and care about it: SCSS, Flexbox, CSS Grid, Tailwind, responsive and component-based styling, and theming through design tokens. I have built UIs on several design systems (React Spectrum, Ant Design, PrimeNG, Bootstrap), so I understand them from the consumer side and from the side of keeping a component library consistent across teams. That is directly relevant to the Vanilla Framework. I treat accessibility as part of CSS and markup quality: semantic HTML, focus management, colour contrast and keyboard navigation.</p>
-<p><b>Python.</b> <span class="c">[CONFIRM: describe honestly, e.g. "Python is not my main professional language. I used it at university for … and for small scripts/automation such as …" or "I have no production Python experience yet, but …"]</span> I am comfortable reading and contributing to back-end code when it helps the front end, and I would welcome building more Python services alongside the back-end engineers. I also have some PHP experience from WordPress work.</p>
+<p><b>JavaScript (9 years).</b> JavaScript has been my main language since 2017, from ES5/ES6 on the Western Union merchant portal up to ES2024 on Adobe Workfront today. I know the language in depth: closures, the event loop and asynchronous patterns (promises, async/await, RxJS observables), modules, and tooling such as Webpack, Babel and ESLint. I also use JavaScript on the server with Node.js.</p>
+<p><b>TypeScript.</b> I use TypeScript daily. All my Angular projects (Fiserv, Cisco Webex, Hudson MX) were strictly typed, and so are my React Native and Node.js projects. I use types as documentation and as a safety net for API contracts. For example, I model payment states as discriminated unions so that impossible states cannot be represented, and I share request and response types between the front end and the Node.js back end so a contract change breaks the build instead of production.</p>
+<p><b>React.</b> At Adobe Workfront I lead front-end development on React, Redux, React Router and React Spectrum, Adobe's accessible design system, in a large shared codebase serving enterprise customers. At Mastercard I worked with React, GraphQL/Apollo and Ant Design on a payments management suite. There I untangled long-standing technical debt and delivered critical features on a dynamic form engine that reshapes the payment form for each client. I also have strong Angular experience (from Angular 5 to modern versions, with NgRx and RxJS), which gives me a useful comparison of how the two ecosystems handle state and change detection. In React Native I built a cross-platform crypto markets and portfolio app.</p>
+<p><b>CSS.</b> I write CSS by hand and care about it: SCSS, Flexbox, CSS Grid, Tailwind, responsive and component-based styling, and theming with design tokens. I have built UIs on several design systems (React Spectrum, Ant Design, PrimeNG, Bootstrap), so I understand them both as a consumer and from the side of keeping a component library consistent across teams. That is directly relevant to the Vanilla Framework. For me accessibility is part of good markup and CSS: semantic HTML, focus management, colour contrast and keyboard navigation.</p>
+<p><b>Python.</b> Python is my second back-end language after Node.js. I use it for small services and automation: a FastAPI service exposing REST endpoints, scripts that import, clean and transform data (for example CSV exports into a database), and tooling that calls LLM APIs as part of my AI work. I value Python for its readability and its excellent libraries, and I am comfortable building and maintaining back-end services in it alongside a team.</p>
 
 <h3>Describe your experience building large systems with many services – web front ends, REST APIs, data stores, event processing and other kinds of integration between components.</h3>
-<p>Most of my career has been building the front ends of large, multi-service systems where the UI is the place where many back-end services meet:</p>
+<p>Most of my professional work has been building the front ends of large, multi-service systems, where the UI is the place in which many back-end services meet:</p>
 <ul>
-  <li><b>Adobe Workfront (Document Management)</b>: upload, preview, versioning and approval of creative assets inside enterprise workflows. These features depend on several services (storage, preview generation, versioning, permissions and workflow), and the UI has to handle long-running asynchronous operations and partial failures gracefully.</li>
+  <li><b>Adobe Workfront (Document Management)</b>: upload, preview, versioning and approval of creative assets inside enterprise workflows. These features depend on several services (storage, preview generation, versioning, permissions and workflow), and the UI must handle long-running asynchronous operations and partial failures gracefully.</li>
   <li><b>Mastercard</b>: a payments management suite with a GraphQL/Apollo data layer over payment, account, user and user-group services, plus an admin layer for payment settings. The dynamic form engine was configuration-driven, so the front end had to stay correct for every client configuration.</li>
-  <li><b>Fiserv</b>: a payments application for creating, viewing and modifying internal and external payments, consuming REST APIs. I built it from the first commit: architecture, Angular workspace, core features, and the conventions the team adopted.</li>
+  <li><b>Fiserv</b>: a payments application for creating, viewing and modifying internal and external payments over REST APIs, which I built from the first commit.</li>
   <li><b>Western Union</b>: a merchant portal for small and medium enterprises with single and multiple points of sale, aggregating transaction and account data.</li>
-  <li><b>My React Native app</b>: real-time event streams over WebSockets combined with REST endpoints for history, local persistence, and push notifications for alerts.</li>
 </ul>
-<p>On these projects I worked closely with back-end engineers on API contracts: response shapes, pagination, error models, and how the UI should behave on timeouts or retries. <span class="c">[CONFIRM: add any direct back-end, database or event-processing work you did yourself (e.g. Node.js endpoints, SQL, queues); otherwise keep it clear that your ownership was the front end and the contract]</span></p>
+<p>In my own products I own the whole stack. For my expense-splitting product, which is live on the web, Android and iOS, I designed and built the REST API in Node.js with TypeScript over a relational database. Some examples of the API design decisions:</p>
+<ul>
+  <li><b>Resource-oriented endpoints</b> such as <code>GET /groups/{id}/expenses</code>, <code>POST /groups/{id}/expenses</code> and <code>GET /groups/{id}/balances</code>, with consistent naming, HTTP verbs and status codes.</li>
+  <li><b>Idempotency keys</b> on <code>POST</code> requests, so that a mobile client retrying on a bad connection never creates the same expense twice. This is a lesson I brought from payments.</li>
+  <li><b>Cursor-based pagination</b> for expense history, and a single, consistent <b>error format</b> (code, message, field details) that every client can display properly.</li>
+  <li><b>Money stored as integer minor units</b> with an explicit currency, never as floating point, and balances calculated on the server so that the web and mobile clients always agree.</li>
+  <li><b>Versioned API</b> (<code>/v1</code>) and shared TypeScript types, so mobile apps already installed on users' phones keep working while the API evolves.</li>
+  <li><b>Authentication</b> with short-lived access tokens and refresh tokens, and authorisation checked on every request, so a user can only access groups they belong to.</li>
+</ul>
+<p>For event-driven integration, my crypto app consumes real-time market data over WebSockets, merges it with REST history endpoints, and triggers push notifications when a price alert condition is met. On the server side, slow work such as sending notifications runs in background jobs rather than inside the request, so the API stays fast.</p>
 
 <h3>What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?</h3>
 <ul>
   <li><b>Clear contracts between components.</b> Well-designed REST APIs (or GraphQL schemas) are the real architecture of a multi-service system. They should be explicit, versioned, documented and typed end to end, so the front end and back end can evolve independently.</li>
-  <li><b>Clear ownership and boundaries.</b> Each service and each front-end module should have one clear responsibility and owner. Shared component libraries such as a design system remove duplication without coupling teams' release cycles.</li>
-  <li><b>Designing for failure.</b> In distributed systems something is always failing somewhere. The UI needs explicit loading, empty, error and partial states. Back ends need timeouts, retries with backoff, and idempotent operations. In payments, idempotency is what stops a retried request from becoming a double payment.</li>
-  <li><b>Data consistency and caching.</b> Decide deliberately where the source of truth is, how stale data may be, and how the client cache is invalidated, especially for real-time data.</li>
-  <li><b>Observability.</b> Logging, metrics, tracing and front-end error reporting, so that issues are found by the team before customers report them.</li>
+  <li><b>Clear ownership and boundaries.</b> Each service and front-end module should have one clear responsibility and owner. Shared component libraries such as a design system remove duplication without tying teams' release cycles together.</li>
+  <li><b>Designing for failure.</b> In a distributed system something is always failing somewhere. The UI needs explicit loading, empty, error and partial states. Back ends need timeouts, retries with backoff, and idempotent operations. In payments, idempotency is what prevents a retried request from becoming a double payment.</li>
+  <li><b>Data consistency and caching.</b> Decide deliberately where the source of truth is, how stale data may be, and how client caches are invalidated, especially for real-time data.</li>
+  <li><b>Asynchronous work and events.</b> Move slow or unreliable work into queues and background jobs, make consumers idempotent, and plan for events arriving late, twice or out of order.</li>
+  <li><b>Observability.</b> Logging, metrics, tracing and front-end error reporting, so the team finds issues before customers report them.</li>
   <li><b>Automated testing at the right levels.</b> Unit tests for logic, component tests for UI behaviour, contract tests between services, and a small set of end-to-end tests for critical user journeys.</li>
-  <li><b>Safe delivery.</b> CI/CD, code review, feature flags and the ability to roll back quickly. Small, frequent releases are less risky than big ones.</li>
+  <li><b>Safe delivery.</b> CI/CD, code review, feature flags and fast rollback. Small, frequent releases are less risky than big ones.</li>
   <li><b>Simplicity and consistency.</b> Shared conventions, linting and documented decisions make a large codebase readable for the next engineer. I learned this when I set the patterns for the Fiserv application, which the rest of the team then followed.</li>
 </ul>
 
 <h3>Describe any experience you have with Flutter.</h3>
-<p><span class="c">[CONFIRM: if you have any Flutter/Dart experience, describe it here. If not, keep the honest version below.]</span> I have not yet shipped a production Flutter application. My closest experience is React Native, where I built and released a cross-platform app from a single codebase. Many of the ideas transfer directly: declarative UI, a component (widget) tree, unidirectional state management, and the focus on 60fps rendering and startup time. I see Flutter as a natural next step for me. It goes further than React Native by owning the rendering itself, which makes consistent desktop, mobile and web targets possible from one codebase. I am ready to learn Dart and Flutter seriously and quickly, as I did with React Native.</p>
+<p>I use Flutter for my own products. My expense-splitting product is built with Flutter and Dart from a single codebase and is <b>live on the web, Android and iOS</b>. I was responsible for everything: the widget architecture, state management, integration with my REST API, responsive layouts that work from a phone to a desktop browser, and the release process to the App Store, Google Play and the web.</p>
+<p>Building it showed me both Flutter's strengths and its trade-offs. The main strength is that one codebase and one rendering engine give the same, consistent UI on every platform, which is very efficient for a small team. The trade-offs show mostly on the web: initial bundle size, text selection and SEO behave differently from a normal DOM-based site, and accessibility needs deliberate attention through Flutter's semantics tree. Because I also build in React and React Native, I can judge when Flutter is the right tool and when a React web front end is the better choice. That is the kind of decision Canonical's teams make as they bring Flutter to desktop and web.</p>
 
 <!-- ============================================================ -->
 <h2>2. Software engineering experience</h2>
 
 <h3>What kinds of software projects have you worked on before?</h3>
-<p>I have spent nine years at Endava delivering front-end solutions for global enterprise and fintech clients:</p>
+<p>I have spent nine years at Endava delivering front-end solutions for global enterprise and fintech clients, and I build my own products alongside that:</p>
 <ul>
   <li><b>Payment platforms</b> for Western Union (merchant portal), Fiserv (payments application built from scratch) and Mastercard (payments management suite with dynamic, per-client forms).</li>
   <li><b>Insurance software</b> for Cisco Webex: complex, data-heavy interfaces for insurers modernising their operations.</li>
   <li><b>Enterprise work management</b> at Adobe Workfront, where I am Dev Lead for Document Management.</li>
   <li><b>Advertising technology</b> at Hudson MX: a cloud-based media-buying platform where I joined mid-project and became productive quickly in an unfamiliar codebase.</li>
-  <li><b>Mobile</b>: my own React Native crypto markets and portfolio app for iOS and Android.</li>
-  <li><b>Websites</b>: WordPress/PHP projects. <span class="c">[CONFIRM: add context or delete]</span></li>
+  <li><b>My own products</b>: an expense-splitting product in Flutter (web, Android, iOS) with a Node.js REST back end, and a React Native crypto markets and portfolio app.</li>
+  <li><b>Websites</b> built with WordPress and PHP.</li>
 </ul>
 
 <h3>Which operating systems, development environments, languages, databases and frameworks?</h3>
 <table>
   <tr><th>Area</th><th>Experience</th></tr>
-  <tr><td>Operating systems</td><td><span class="c">[CONFIRM: e.g. macOS / Windows / Ubuntu Linux; mention any Ubuntu use specifically]</span></td></tr>
-  <tr><td>Development environments</td><td><span class="c">[CONFIRM: e.g. VS Code, WebStorm]</span>, Git/GitHub, CI/CD pipelines, Chrome DevTools, Xcode and Android Studio for React Native</td></tr>
-  <tr><td>Languages</td><td>TypeScript, JavaScript (ES5–ES2024), HTML5, CSS3/SCSS, PHP <span class="c">[CONFIRM: Python / others]</span></td></tr>
-  <tr><td>Frameworks and libraries</td><td>React, React Native (Expo/EAS, Reanimated, Gesture Handler, React Navigation, Hermes), Angular, Redux / Redux Toolkit, NgRx, RxJS, GraphQL / Apollo Client, Transloco</td></tr>
+  <tr><td>Operating systems</td><td>macOS for daily development; Linux servers and containers for deployment; iOS and Android as target platforms</td></tr>
+  <tr><td>Development environments</td><td>WebStorm, Git/GitHub, CI/CD pipelines, Chrome DevTools, Xcode and Android Studio for mobile builds, Claude and Copilot</td></tr>
+  <tr><td>Languages</td><td>TypeScript, JavaScript (ES5–ES2024), HTML5, CSS3/SCSS, Dart, Python, PHP</td></tr>
+  <tr><td>Front-end frameworks</td><td>React, Angular, Flutter, React Native (Expo/EAS, Reanimated, Gesture Handler, React Navigation, Hermes), Redux / Redux Toolkit, NgRx, RxJS, GraphQL / Apollo Client, Transloco</td></tr>
+  <tr><td>Back end</td><td>Node.js, FastAPI (Python), REST API design, WebSockets</td></tr>
   <tr><td>UI systems</td><td>React Spectrum, Ant Design, PrimeNG, Bootstrap, Tailwind CSS</td></tr>
-  <tr><td>Testing</td><td>Jest, React Native Testing Library, Jasmine, Cypress (E2E)</td></tr>
+  <tr><td>Databases</td><td>PostgreSQL, MySQL (with WordPress), client-side storage on mobile and web</td></tr>
+  <tr><td>Testing</td><td>Jest, React Native Testing Library, Jasmine, Cypress (E2E), Flutter widget tests</td></tr>
   <tr><td>Build tooling</td><td>Webpack, Babel, ESLint, EAS / TestFlight</td></tr>
-  <tr><td>Databases and storage</td><td><span class="c">[CONFIRM: e.g. MySQL (WordPress), PostgreSQL, client-side storage such as AsyncStorage/IndexedDB]</span></td></tr>
 </table>
 
 <h3>Outline your thoughts on open-source software development. Have you been an open-source maintainer, and can you describe the scope of your contributions to those projects?</h3>
-<p>Almost everything I build stands on open source: React, Angular, React Native, Redux, RxJS, Webpack, Jest, Cypress and many more. I value the open-source model because it makes software better through transparency. Anyone can read the code, find the bug and propose the fix, and good ideas spread across the industry instead of staying locked inside one company. Open design systems are a good example. Spectrum's accessibility work, which I use daily, benefits everyone who studies or adopts it, and Vanilla can do the same for open-source projects that need a solid, accessible UI layer.</p>
-<p>I also think open source needs sustainable maintainership: clear governance, good documentation, a welcoming contribution process, and companies that pay engineers to maintain what they depend on. Canonical's model is a strong example of that.</p>
-<p><span class="c">[CONFIRM: describe your own open-source activity honestly, e.g. issues reported, pull requests, public repos on GitHub. If you have not been a maintainer, say so directly, e.g. "I have not yet been an open-source maintainer; most of my work has been on private client codebases. Working in the open is one of the main reasons I am applying to Canonical."]</span></p>
+<p>Almost everything I build stands on open source: React, Angular, Flutter, React Native, Node.js, Redux, RxJS, Webpack, Jest, Cypress and many more. I value the open-source model because it makes software better through transparency. Anyone can read the code, find a bug and propose the fix, and good ideas spread across the industry instead of staying locked inside one company. Open design systems are a good example. Spectrum's accessibility work, which I use every day, benefits everyone who studies or adopts it, and Vanilla can do the same for open-source projects that need a solid, accessible UI layer.</p>
+<p>I also believe open source needs sustainable maintainership: clear governance, good documentation, a welcoming contribution process, and companies that pay engineers to maintain what they depend on. Canonical's model is a strong example of that.</p>
+<p>I have not yet been an open-source maintainer. My professional work has been on private client codebases, and my own products are currently private repositories. Working in the open, as part of a company whose products are open source, is one of the main reasons I am applying to Canonical.</p>
 
 <h3>What software products have you yourself led which shipped many releases to multiple customers? What was your role?</h3>
 <ul>
-  <li><b>Adobe Workfront – Document Management (2024–present), Dev Lead.</b> Workfront is used by many of the world's largest brands, and Document Management ships continuously to all of them. I drive planning and delivery, unblock engineers, review code, and keep developers, QA and design aligned. I am the first point of contact when a critical production issue needs diagnosing. <span class="c">[CONFIRM: release cadence, e.g. "releases every two weeks"]</span></li>
-  <li><b>Fiserv payments application (2022–2023), front-end owner from the first commit.</b> I designed the architecture, set up the Angular workspace, implemented the core features and multi-language support, and set the patterns the team followed. <span class="c">[CONFIRM: how many releases/clients or markets it shipped to]</span></li>
-  <li><b>My React Native crypto app (2025–present), sole owner</b> of design, architecture, build automation and releases through EAS/TestFlight. <span class="c">[CONFIRM: is it public in the stores? number of releases or users, if any]</span></li>
+  <li><b>Adobe Workfront – Document Management (2024–present), Dev Lead.</b> Workfront is used by many of the world's largest brands, and Document Management ships regular releases to all of them. I drive planning and delivery, unblock engineers, review code, and keep developers, QA and design aligned. I am the first point of contact when a critical production issue needs diagnosing.</li>
+  <li><b>Fiserv payments application (2022–2023), front-end owner from the first commit.</b> I designed the architecture, set up the Angular workspace, implemented the core features and multi-language support, and set the patterns the team followed through its later releases.</li>
+  <li><b>My expense-splitting product (Flutter, Node.js), sole owner.</b> I designed, built and continue to release it on three platforms (web, Android and iOS) to real users. I own the product decisions, architecture, back end, releases and support.</li>
 </ul>
 
 <h3>What is your most senior role in a software engineering organisation?</h3>
 <p>My current role: <b>Senior UI Developer and Dev Lead</b> at Endava, leading the front-end team for Adobe Workfront's Document Management area. I joined Endava in 2017 as a UI Developer and was promoted from Mid-Level to Senior during the Cisco Webex engagement, in recognition of owning features from design handoff through end-to-end testing.</p>
 
 <h3>Describe your span of control and the diversity of products, functions and teams you led.</h3>
-<p>As Dev Lead I coordinate <span class="c">[CONFIRM: number]</span> engineers and work daily with QA, design and product management, both on our team and across Adobe teams that share the same codebase and design system. <span class="c">[CONFIRM: say whether you have formal line-management responsibility (performance reviews, hiring interviews) or a technical leadership role]</span> Across my career I have worked in four product domains (payments, insurance, enterprise work management and advertising), with clients in different time zones and cultures, which taught me to adapt quickly to new teams and codebases. I mentor developers through code reviews, pairing and shared coding standards. <span class="c">[CONFIRM: number of developers mentored, or an example of someone you helped grow]</span></p>
+<p>As Dev Lead I lead the front-end developers of the Document Management team and work every day with QA engineers, designers, product managers and back-end developers. I also coordinate with other Adobe teams that share the same codebase and design system. My role is technical and delivery leadership: I own front-end architecture decisions, plan and distribute work, set and maintain coding standards through code review, mentor developers, and represent the team when critical production issues need a fast, clear response.</p>
+<p>Across my career I have worked in four product domains (payments, insurance, enterprise work management and advertising), with clients in different countries, time zones and cultures. This taught me to adapt quickly to a new team and codebase, which I showed on Hudson MX, where I joined mid-project and was shipping features within a short time. Outside client work, I have led full products myself from idea to release, including the product, design, back-end and mobile decisions.</p>
+<p>One example of leadership I am proud of: on Workfront, users with very large folders reported that the document list became slow and sometimes froze when they selected or filtered assets. I took ownership of the investigation. Profiling with the React Profiler showed that each selection re-rendered the entire list, because a Redux selector returned a new array on every state change and some row components received new callback references each time. Together with one of the developers I was mentoring, we introduced memoised selectors, stabilised the callbacks, split each row into a memoised component, and virtualised the list so only the visible rows were rendered. Selection and filtering in large folders became instant, and the related customer complaints stopped. Just as important, we turned the lessons into code-review guidelines and a short session for the team, so the same problem does not return in other parts of the product.</p>
 
 <h3>Outline your views on the role of an engineering manager in shaping a high-functioning team.</h3>
 <p>I think a good engineering manager mostly creates the conditions in which good engineers can do their best work:</p>
 <ul>
   <li><b>Clarity.</b> Everyone should know what we are building, why it matters to the user, and what "done" means. Most team friction comes from unclear goals, not from bad engineers.</li>
-  <li><b>Psychological safety.</b> People must feel safe to say "I don't understand", "I made a mistake" or "I think this design is wrong". As a Dev Lead I try to show this myself, for example by admitting openly when I am not sure.</li>
+  <li><b>Psychological safety.</b> People must feel safe to say "I don't understand", "I made a mistake" or "I think this design is wrong". I try to show this myself as a lead, for example by saying openly when I am not sure about something.</li>
   <li><b>Removing blockers.</b> The manager's time is well spent unblocking others: getting a decision from product, clarifying an API with another team, or protecting focus time.</li>
   <li><b>Growth.</b> Regular honest feedback, stretch tasks matched to each person, and mentoring. Teams stay strong when people can see themselves progressing.</li>
   <li><b>High standards, shared by everyone.</b> Code review, testing and accessibility should be team habits, not personal preferences. The manager sets the bar and makes it easy to meet.</li>
-  <li><b>Healthy delivery rhythm.</b> Sustainable pace, small increments, and blameless retrospectives after incidents so the team learns instead of hiding problems.</li>
+  <li><b>Healthy delivery rhythm.</b> Sustainable pace, small increments, and blameless retrospectives after incidents, so the team learns instead of hiding problems.</li>
   <li><b>Hiring and team composition.</b> Hiring for ability, curiosity and communication, and building a team with complementary strengths.</li>
+  <li><b>A positive culture.</b> Energy and optimism are contagious, especially under pressure. I have always been the person who stays positive and supportive when things are difficult, and I have seen how much that helps a team keep focus and recover from setbacks.</li>
 </ul>
 
 <h3>Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?</h3>
 <p>Performance is a feature that users feel even when they cannot name it. My approach is to <b>measure, set budgets, and keep it fast continuously</b> instead of fixing it once.</p>
 <ul>
-  <li><b>Measure first:</b> Chrome DevTools performance profiles, the React Profiler, Lighthouse and Core Web Vitals (LCP, INP, CLS), and on mobile, frame rates and cold-start time. I don't optimise on assumptions.</li>
-  <li><b>Ship less code:</b> code splitting and lazy loading per route, tree-shaking, avoiding heavy dependencies, and watching bundle size in CI.</li>
-  <li><b>Render less:</b> correct memoisation boundaries, stable references, normalised state, selectors, and virtualised lists for large data sets. In React Native these techniques plus Hermes and Reanimated are what made 60fps interactions possible.</li>
-  <li><b>Fetch smarter:</b> pagination, caching and request de-duplication (e.g. Apollo cache), avoiding waterfalls, and good API design. A well-shaped REST endpoint is often the biggest performance improvement.</li>
+  <li><b>Measure first:</b> Chrome DevTools performance profiles, the React Profiler, Lighthouse and Core Web Vitals (LCP, INP, CLS), and on mobile, frame rates and cold-start time. I don't optimise based on assumptions.</li>
+  <li><b>Ship less code:</b> code splitting and lazy loading per route, tree-shaking, avoiding heavy dependencies, and watching bundle size in CI. This matters even more for Flutter on the web, where the initial download is a key cost.</li>
+  <li><b>Render less:</b> correct memoisation boundaries, stable references, normalised state, memoised selectors, and virtualised lists for large data sets. The Workfront document-list example above is a typical case. In React Native, the same techniques plus Hermes and Reanimated are what made 60fps interactions possible.</li>
+  <li><b>Fetch smarter:</b> pagination, caching and request de-duplication, avoiding request waterfalls, and good API design. A well-shaped REST endpoint that returns exactly what the screen needs is often the biggest performance improvement.</li>
+  <li><b>Fast back ends:</b> proper database indexes, avoiding N+1 queries, and moving slow work into background jobs.</li>
   <li><b>Perceived performance:</b> skeletons, optimistic updates and progressive rendering, so the interface responds immediately.</li>
   <li><b>CSS and assets:</b> modern layout instead of JavaScript-driven layout, optimised images and fonts, and avoiding layout thrashing.</li>
   <li><b>Guard against regressions:</b> performance budgets and checks in CI, so the product stays fast as the team adds features.</li>
 </ul>
-<p><span class="c">[CONFIRM: add one measurable example from your work, e.g. bundle size reduced by X%, load time from A to B]</span></p>
 
 <h3>Outline your thoughts on quality in software development. What practices are most effective in software teams to drive improvements in quality?</h3>
-<p>Quality is not a phase at the end. It is the result of many small habits that the whole team shares. The practices I have seen work best:</p>
+<p>Quality is not a phase at the end. It is the result of many small habits shared by the whole team. The practices I have seen work best:</p>
 <ul>
-  <li><b>Thoughtful code review</b> focused on correctness, readability and design, not just style. Linters and formatters (ESLint, Prettier) should handle style automatically so humans can focus on what matters.</li>
-  <li><b>Strong typing:</b> TypeScript catches a whole class of bugs before they exist, especially at API boundaries.</li>
-  <li><b>A balanced test suite:</b> fast unit and component tests (Jest, Testing Library), and end-to-end tests (Cypress) for critical journeys. On Cisco Webex I covered critical user flows with Cypress, which gave the team confidence to refactor.</li>
+  <li><b>Thoughtful code review</b> focused on correctness, readability and design, not just style. Linters and formatters should handle style automatically so people can focus on what matters.</li>
+  <li><b>Strong typing:</b> TypeScript and Dart catch a whole class of bugs before they exist, especially at API boundaries.</li>
+  <li><b>A balanced test suite:</b> fast unit and component tests, plus end-to-end tests for critical journeys. On Cisco Webex I covered critical user flows with Cypress, which gave the team confidence to refactor.</li>
   <li><b>CI that blocks merges</b> on failing tests, lint or type errors, and small pull requests that are easy to review.</li>
   <li><b>Design systems:</b> reusable, accessible, well-tested components mean each bug is fixed once, for every product.</li>
   <li><b>Accessibility as part of the definition of done:</b> semantic HTML, keyboard navigation, screen-reader checks and contrast are quality issues, not extras.</li>
   <li><b>Close collaboration with QA and design</b> from the start, so requirements and edge cases are clear before coding begins. In payments, edge cases are where the real bugs live.</li>
-  <li><b>Learning from incidents:</b> blameless post-mortems and turning every production bug into a regression test.</li>
+  <li><b>Responsible use of AI tools:</b> AI-generated code is reviewed and tested exactly like human code. AI can also raise quality by generating test cases and spotting edge cases a reviewer might miss.</li>
+  <li><b>Learning from incidents:</b> blameless post-mortems, and turning every production bug into a regression test.</li>
   <li><b>Paying down technical debt deliberately</b>, as I did at Mastercard, instead of letting it accumulate until it blocks delivery.</li>
 </ul>
 
@@ -160,77 +172,93 @@
 <h2>3. Education</h2>
 
 <h3>How did you rank in your final year of high school in mathematics? Were you a top student? On what basis would you say that?</h3>
-<p><span class="c">[CONFIRM: your final-year maths grade (Moldova uses a 1–10 scale, 10 is the highest), your position in class/school, and the evidence – e.g. "I had a 10/10 average in mathematics and was among the top 3 in my class; I represented my school at the district/national mathematics olympiad, where I placed …"]</span></p>
+<p>I studied at the Theoretical Lyceum "Mihai Viteazul" and was the top student in my class overall in my final year. In mathematics I was among the strong students of my class. I scored <b>9 out of 10 in the national Baccalaureate (BAC) examination in mathematics</b>, which is a high result on a national, externally marked exam. I say this on the basis of the national exam result and my school grades. To be honest, mathematics was a strong subject for me but not my very strongest one; my best results were in Romanian, biology and English.</p>
 
 <h3>How did you rank in your final year of high school, in your home language? Were you a top student? On what basis would you say that?</h3>
-<p>My native languages are Romanian and Russian. <span class="c">[CONFIRM: which was your language of instruction, your final-year grade and rank, and the evidence, e.g. olympiads, essay competitions, BAC result in that subject]</span></p>
+<p>Yes. Romanian was my language of instruction, and I achieved the <b>maximum grade of 10 out of 10 in the national Baccalaureate examination in Romanian language and literature</b>. Together with my overall position as top student in my class, this is the basis for saying I was a top student in my home language. I have always loved reading, which helped me a lot in literature and writing.</p>
 
 <h3>Please state your high school graduation results or university entrance results, and explain the grading system used.</h3>
-<p>In Moldova, high school ends with the national Baccalaureate examination (BAC). Results are graded on a 1–10 scale, where 10 is the highest and 5 is the minimum pass. University admission is based mainly on the BAC average together with the school-year averages.</p>
-<p><span class="c">[CONFIRM: your BAC overall average and subject grades (e.g. Mathematics X, Romanian X, …), your school graduation average, and whether you were admitted to university on a state-funded (budget) place, which is competitive and based on these grades]</span></p>
-
-<h3>Can you make a case that you are in the top 5% in your academic year, or top 1%, or even higher? If so please outline that case.</h3>
-<p><span class="c">[CONFIRM: only include what you can support.]</span> My case rests on the following:</p>
+<p>In Moldova, high school ends with the national Baccalaureate examination (BAC). Exams are written in the same conditions across the country and are marked externally. Results use a 1–10 scale, where 10 is the highest and 5 is the minimum pass. University admission is based mainly on the BAC results.</p>
 <ul>
-  <li><b>Gold Medal for academic excellence.</b> <span class="c">[CONFIRM: was it awarded at high school graduation or at university? In Moldova the high-school Gold Medal is given only to graduates with top grades in all subjects across the final years – state the criteria and how many students in your school/year received it.]</span></li>
-  <li><b>Erasmus Mundus exchange in Prague.</b> <span class="c">[CONFIRM: host university, duration, and how competitive the selection was, e.g. "one of N students selected from the faculty"]</span></li>
-  <li><span class="c">[CONFIRM: any olympiad placements, scholarships, ranking in your university cohort, or other standardised results]</span></li>
+  <li>Romanian language and literature: <b>10 / 10</b> (the maximum)</li>
+  <li>Mathematics: <b>9 / 10</b></li>
+  <li>Overall: top student in my class in the final year</li>
 </ul>
 
+<h3>Can you make a case that you are in the top 5% in your academic year, or top 1%, or even higher? If so please outline that case.</h3>
+<p>Yes, I believe I can make a well-supported case for the top 5% of my academic year, both at school and at university:</p>
+<ul>
+  <li><b>High school:</b> top student in my class; the maximum mark (10/10) in the national BAC exam in Romanian and 9/10 in mathematics; and selection to represent my school at the <b>regional olympiads in Biology and English</b>. Only the best students from each school are chosen for olympiads.</li>
+  <li><b>University:</b> a final average of <b>9.7 out of 10</b>, a merit scholarship, and the <b>Gold Medal as the best student of the year</b>, which goes to the single strongest student. That last award is the clearest evidence that I was at the very top of my year.</li>
+  <li><b>International selection:</b> I was chosen through a competitive selection for an <b>11-month Erasmus Mundus exchange at the Czech Technical University in Prague</b>. Places are limited and awarded on academic merit.</li>
+  <li><b>Choice of universities:</b> I was also offered a place with a scholarship at the Technical University of Cluj-Napoca in Romania, one of the leading technical universities in the region.</li>
+</ul>
+<p>Being named best student of the year suggests a position well within the top 1% at university, while my school results support the top 5%.</p>
+
 <h3>What sort of high school student were you? Outside of class, what were your interests and hobbies? What would your high school peers remember you for?</h3>
-<p><span class="c">[CONFIRM: describe yourself in your own words – e.g. disciplined/curious, favourite subjects, hobbies (sport, music, art, languages, programming), clubs, and what classmates would remember you for]</span></p>
+<p>I was a hard-working, curious and consistent student who enjoyed learning across very different subjects, from biology to languages to mathematics. Outside class my great passion was reading books. Reading widely shaped how I think and write, and it is still one of my favourite ways to learn. I also spent time preparing for the biology and English olympiads, which taught me to study deeply and independently, beyond the curriculum.</p>
+<p>I think my classmates would remember me for being <b>very positive in any situation and very supportive</b>. I was the person others came to when they needed help with a subject, encouragement before an exam, or simply someone to listen. I still bring this to my teams today.</p>
 
 <h3>Which university and degree did you choose? What other universities did you consider, and why did you select that one?</h3>
-<p>I studied for a <b>Bachelor's degree in Information Technology at the Technical University of Moldova (2012–2016)</b>, the country's leading technical university and the main source of engineers for Moldova's IT industry. <span class="c">[CONFIRM: other universities you considered (e.g. Moldova State University, universities in Romania) and your real reasons for choosing UTM – e.g. reputation in engineering, practical programme, links with IT companies, scholarship]</span></p>
+<p>I chose a <b>Bachelor's degree in Information Technology at the Technical University of Moldova (2012–2016)</b>, the country's leading technical university and the main source of engineers for Moldova's IT industry.</p>
+<p>I also seriously considered the <b>Technical University of Cluj-Napoca</b> in Romania, one of the strongest technical universities in the region, which offered me a place with a scholarship. I declined it because, at that time, a personal family matter meant it was important for me to stay close to my family. It was a difficult decision, but the right one. I committed fully to my studies in Chișinău and graduated as the best student of my year. Later, through the Erasmus Mundus programme, I still gained a long period of international study.</p>
 
 <h3>Overall, what was your degree result and how did that reflect on your ability? Please help us understand the grading system for your results.</h3>
-<p>Moldovan universities grade on the same 1–10 scale (10 highest, 5 minimum pass). <span class="c">[CONFIRM: your overall average, licence (thesis) grade and thesis topic, and your rank in the cohort if known, plus whether you studied on a merit scholarship]</span> During my studies I also took part in the Erasmus Mundus exchange in Prague, which gave me experience of a different academic system and an international environment early on.</p>
+<p>Moldovan universities grade on a 1–10 scale, where 10 is the highest and 5 is the minimum pass. Averages above 9 are considered excellent and are reached by a small minority of students. I graduated with a <b>final average of 9.7 out of 10</b>, studied on a <b>merit scholarship</b>, and received the <b>Gold Medal as the best student of the year</b>.</p>
+<p>I think this shows not only ability but consistency. A 9.7 average means performing at the highest level across four years and across very different subjects: mathematics, programming, networks, databases and theory. That consistency is how I still work today.</p>
+<p>During my studies I also spent <b>11 months at the Czech Technical University in Prague</b> through the Erasmus Mundus programme. Studying in English, in a different academic system and an international environment, taught me to adapt quickly and to communicate with people from many cultures. That has been very valuable in my career with international clients.</p>
 
 <h3>During all of your education years, from high school to university, can you describe any achievements that were truly exceptional?</h3>
 <ul>
-  <li>Gold Medal for academic excellence. <span class="c">[CONFIRM: details as above]</span></li>
-  <li>Selection for the Erasmus Mundus exchange programme in Prague. <span class="c">[CONFIRM: details]</span></li>
-  <li><span class="c">[CONFIRM: any other exceptional achievement, e.g. olympiads, competitions, research, awards]</span></li>
+  <li><b>Gold Medal as the best student of the year</b> at the Technical University of Moldova.</li>
+  <li><b>Final university average of 9.7/10</b>, with a merit scholarship.</li>
+  <li><b>Maximum grade (10/10) in the national Baccalaureate exam in Romanian</b>, and 9/10 in mathematics.</li>
+  <li><b>Regional olympiad participant in Biology and English</b>, selected to represent my school.</li>
+  <li><b>Competitive selection for an 11-month Erasmus Mundus exchange</b> at the Czech Technical University in Prague.</li>
+  <li><b>Scholarship offer from the Technical University of Cluj-Napoca</b>.</li>
 </ul>
 
 <h3>What leadership roles did you take on during your education? Did you conceive of, and drive to completion, any initiatives outside of your required classwork?</h3>
-<p><span class="c">[CONFIRM: e.g. class president, student council, group leader at university, organising events, volunteering, starting a club or project. If none, describe initiative you took in your own learning, e.g. learning web development on your own before your first job.]</span></p>
+<p>I did not hold formal titles such as class president. My leadership during my education was mostly informal, and it came from the same qualities my classmates remember me for. I regularly helped classmates prepare for exams and explained difficult topics, and I was often the one who kept a group motivated and positive under pressure.</p>
+<p>Outside required classwork, my biggest initiatives were self-driven. I prepared for the biology and English olympiads beyond the school curriculum. I applied for and completed an 11-month study period abroad in Prague, which required independence and adaptation in a new country and language. Learning that I could take full responsibility for my own goals, and help others reach theirs, prepared me for the Dev Lead role I hold today.</p>
 
 <!-- ============================================================ -->
 <h2>4. Context</h2>
 
 <h3>Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What is risky or unappealing? Are there any elements of the company goals that you are unsure about?</h3>
 <p>As I understand it, Canonical's mission is to make open-source software secure, reliable and easy to use for everyone, from a single developer's laptop to the largest clouds, data centres and edge devices, and to fund that work sustainably through enterprise support and services. Ubuntu is the visible part of the mission. Behind it are long-term security maintenance, cloud and Kubernetes tooling, IoT, and the web products that let people discover, install and manage all of this.</p>
-<p><b>What appeals to me most</b> is that the work is open and has very wide reach. Improvements made here are used by millions of people and organisations, not only one client. As a front-end engineer I find the Vanilla Framework especially meaningful: a shared, accessible presentation layer that brings consistency to Canonical's products and can be adopted by other open-source projects that often have no designers or front-end specialists. Accessibility done well in a shared toolkit spreads to every product built on it. I also like that Canonical treats design as engineering's partner.</p>
-<p><b>What I see as risky:</b> Canonical competes against companies with much larger budgets while also giving much of its work away for free. That requires very careful focus. Some product decisions (Snap, for example) have caused friction with parts of the community, and being both a community steward and a commercial vendor is a difficult balance. The globally distributed, remote-first model with a demanding bar is a great strength, but it also needs excellent written communication and discipline. I see that as a challenge I would enjoy rather than a negative.</p>
-<p><b>What I am unsure about:</b> the long-term role of Flutter. It is a promising way to unify desktop and web, but it depends heavily on Google's continued investment, and Flutter on the web still has trade-offs in accessibility, SEO and bundle size compared with React. I would like to understand how Canonical decides which products should be built in Flutter and which stay in React.</p>
+<p><b>What appeals to me most</b> is that the work is open and has very wide reach. Improvements made here are used by millions of people and organisations, not only one client. As a front-end engineer I find the Vanilla Framework especially meaningful: a shared, accessible presentation layer that brings consistency to Canonical's products and can be adopted by other open-source projects that often have no designers or front-end specialists. Accessibility done well in a shared toolkit spreads to every product built on it. I also like that Canonical treats design as a partner of engineering, and that it is investing in Flutter, a technology I already use and believe in.</p>
+<p><b>What I see as risky:</b> Canonical competes against companies with much larger budgets while also giving much of its work away for free. That requires very careful focus. Some product decisions, such as Snap, have caused friction with parts of the community, and being both a community steward and a commercial vendor is a difficult balance. The globally distributed, remote-first model with a demanding bar is a great strength, but it needs excellent written communication and self-discipline. I see that as a challenge I would enjoy rather than a negative.</p>
+<p><b>What I am unsure about:</b> the long-term role of Flutter on the web. From my own experience, Flutter is excellent for unifying mobile and desktop, but on the web it still has trade-offs in initial load size, SEO and accessibility compared with React. It also depends on Google's continued investment. I would like to understand how Canonical decides which products should be built in Flutter and which should stay in React.</p>
 
 <h3>Who are competitors to Canonical, and what does Canonical need to change to be a more effective competitor?</h3>
 <ul>
   <li><b>Enterprise Linux:</b> Red Hat (IBM) with RHEL and OpenShift, SUSE, and community rebuilds such as Rocky Linux and AlmaLinux.</li>
-  <li><b>Cloud providers' own platforms:</b> Amazon Linux, Azure Linux, Google's Container-Optimized OS, and managed Kubernetes services that reduce the need for a separately supported OS.</li>
-  <li><b>Developer desktop:</b> macOS and Windows with WSL, which, ironically, often runs Ubuntu.</li>
+  <li><b>Cloud providers' own platforms:</b> Amazon Linux, Azure Linux, Google's Container-Optimized OS, and managed Kubernetes services that reduce the need for a separately supported operating system.</li>
+  <li><b>Developer desktop:</b> macOS (which I use myself) and Windows with WSL, which, ironically, often runs Ubuntu.</li>
   <li><b>Private cloud and infrastructure:</b> VMware (Broadcom) and Nutanix, and Red Hat OpenShift for Kubernetes.</li>
-  <li><b>Secure container images and supply chain:</b> companies like Chainguard and Docker's hardened images.</li>
+  <li><b>Secure container images and the software supply chain:</b> companies such as Chainguard, and Docker's hardened images.</li>
 </ul>
 <p>To compete more effectively, I think Canonical should:</p>
 <ul>
-  <li>Make the <b>web experience</b> of its products as polished and self-service as the best SaaS: clear docs, fast and accessible dashboards, simple trial and purchase flows. Enterprise buyers often judge a platform by its interfaces first. This is where web engineering has direct commercial impact.</li>
-  <li>Communicate its <b>security and long-term support value</b> more clearly, especially in the current climate around Red Hat's source policies and VMware's licensing changes, which are opportunities to win customers.</li>
-  <li>Keep strengthening <b>community trust</b> through openness about decisions such as Snap, so developers stay advocates.</li>
-  <li>Grow the <b>Vanilla Framework</b> outside Canonical, with strong documentation, React components and examples, so that it becomes a recognised open-source design system and a channel to developers.</li>
+  <li>Make the <b>web experience</b> of its products as polished and self-service as the best SaaS products: clear docs, fast and accessible dashboards, and simple trial and purchase flows. Enterprise buyers often judge a platform by its interfaces first, and this is where web engineering has direct commercial impact.</li>
+  <li>Communicate its <b>security and long-term support value</b> more clearly, especially now, when Red Hat's source policy and VMware's licensing changes are pushing customers to look for alternatives.</li>
+  <li>Win over more <b>developers on macOS and Windows</b>, for example through excellent WSL, container and virtual-machine experiences, so Ubuntu stays the default wherever developers work.</li>
+  <li>Keep strengthening <b>community trust</b> through openness about decisions such as Snap, so developers remain advocates.</li>
+  <li>Grow the <b>Vanilla Framework</b> outside Canonical, with strong documentation, React components and examples, so it becomes a recognised open-source design system and a channel to developers.</li>
 </ul>
 
 <h3>What would you most want to change about Canonical?</h3>
-<p>From the outside, I would most like to see Canonical's design and front-end work become more visible to the wider developer community. Vanilla is a strong project, but it is much less known than Material UI, Carbon or Spectrum. More public documentation, examples, talks and contributions to accessibility standards would attract more open-source projects to it and help hiring too. I would be glad to contribute to that. I am aware this is an outside view, and I would first want to understand the reasons behind current priorities before suggesting changes.</p>
+<p>From the outside, I would most like Canonical's design and front-end work to become more visible to the wider developer community. Vanilla is a strong project, but it is much less known than Material UI, Carbon or Spectrum. More public documentation, examples, talks and contributions to accessibility standards would attract more open-source projects to it, and would help hiring too. I would be glad to contribute to that. I am aware this is an outside view, and I would first want to understand the reasons behind current priorities before proposing changes.</p>
 
 <h3>What gets you most excited about this role?</h3>
 <ul>
   <li><b>Working in the open.</b> After nine years on private client codebases, the chance to build software that anyone can use, read and improve is the main reason I am applying.</li>
-  <li><b>Design systems and accessibility at scale.</b> I have worked on top of React Spectrum and other design systems for years. Contributing to Vanilla and helping more projects build accessible, responsive interfaces is exactly the kind of work I enjoy most.</li>
-  <li><b>React plus Flutter.</b> My recent React Native work showed me the value of one codebase across platforms. Growing into Flutter, with a real opportunity to unify desktop and web, is a challenge I am excited about.</li>
-  <li><b>Full-stack ownership and well-designed APIs.</b> I want to work in a place where front-end engineers help design the REST APIs and sometimes build the back-end service as well.</li>
-  <li><b>The people.</b> A global, high-bar team of engineers and designers from whom I can learn, and to whom I can bring my experience of leading and mentoring.</li>
+  <li><b>Design systems and accessibility at scale.</b> I have worked on top of React Spectrum and other design systems for years. Contributing to Vanilla and helping more projects build accessible, responsive interfaces is exactly the work I enjoy most.</li>
+  <li><b>React and Flutter together.</b> I already build with both, and I would love to help Canonical use each where it fits best and bring Flutter to desktop and web.</li>
+  <li><b>Full-stack ownership and well-designed APIs.</b> I enjoy designing REST APIs and building back-end services in Node.js and Python, and this role allows front-end engineers to do both.</li>
+  <li><b>AI-assisted engineering.</b> I would like to bring my experience with AI tools and agentic workflows to a team that cares about quality as much as I do.</li>
+  <li><b>The people and the way of working.</b> A global, remote-first, high-bar team of engineers and designers that I can learn from, and to which I can bring my experience of leading, mentoring and keeping a team positive under pressure.</li>
 </ul>
 
 </body>
