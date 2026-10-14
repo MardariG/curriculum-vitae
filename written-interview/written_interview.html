@@ -51,11 +51,11 @@
   <li><b>Fiserv</b>: a payments application for creating, viewing and modifying internal and external payments over REST APIs, which I built from the first commit.</li>
   <li><b>Western Union</b>: a merchant portal for small and medium enterprises with single and multiple points of sale, aggregating transaction and account data.</li>
 </ul>
-<p>In my own products I own the whole stack. For my expense-splitting product, which is live on the web, Android and iOS, I designed and built the REST API in Node.js with TypeScript over a relational database. Some examples of the API design decisions:</p>
+<p>In my own products I own the whole stack. For my bill-splitting app, which is live on the web, Android and iOS, I designed and built the REST API in Node.js with TypeScript over a relational database. Some examples of the API design decisions:</p>
 <ul>
-  <li><b>Resource-oriented endpoints</b> such as <code>GET /groups/{id}/expenses</code>, <code>POST /groups/{id}/expenses</code> and <code>GET /groups/{id}/balances</code>, with consistent naming, HTTP verbs and status codes.</li>
-  <li><b>Idempotency keys</b> on <code>POST</code> requests, so that a mobile client retrying on a bad connection never creates the same expense twice. This is a lesson I brought from payments.</li>
-  <li><b>Cursor-based pagination</b> for expense history, and a single, consistent <b>error format</b> (code, message, field details) that every client can display properly.</li>
+  <li><b>Resource-oriented endpoints</b> such as <code>GET /groups/{id}/bills</code>, <code>POST /groups/{id}/bills</code> and <code>GET /groups/{id}/balances</code>, with consistent naming, HTTP verbs and status codes.</li>
+  <li><b>Idempotency keys</b> on <code>POST</code> requests, so that a mobile client retrying on a bad connection never creates the same bill twice. This is a lesson I brought from payments.</li>
+  <li><b>Cursor-based pagination</b> for bill history, and a single, consistent <b>error format</b> (code, message, field details) that every client can display properly.</li>
   <li><b>Money stored as integer minor units</b> with an explicit currency, never as floating point, and balances calculated on the server so that the web and mobile clients always agree.</li>
   <li><b>Versioned API</b> (<code>/v1</code>) and shared TypeScript types, so mobile apps already installed on users' phones keep working while the API evolves.</li>
   <li><b>Authentication</b> with short-lived access tokens and refresh tokens, and authorisation checked on every request, so a user can only access groups they belong to.</li>
@@ -76,7 +76,7 @@
 </ul>
 
 <h3>Describe any experience you have with Flutter.</h3>
-<p>I use Flutter for my own products. My expense-splitting product is built with Flutter and Dart from a single codebase and is <b>live on the web, Android and iOS</b>. I was responsible for everything: the widget architecture, state management, integration with my REST API, responsive layouts that work from a phone to a desktop browser, and the release process to the App Store, Google Play and the web.</p>
+<p>I use Flutter for my own products. My bill-splitting app is built with Flutter and Dart from a single codebase and is <b>live on the web, Android and iOS</b>. I was responsible for everything: the widget architecture, state management, integration with my REST API, responsive layouts that work from a phone to a desktop browser, and the release process to the App Store, Google Play and the web.</p>
 <p>Building it showed me both Flutter's strengths and its trade-offs. The main strength is that one codebase and one rendering engine give the same, consistent UI on every platform, which is very efficient for a small team. The trade-offs show mostly on the web: initial bundle size, text selection and SEO behave differently from a normal DOM-based site, and accessibility needs deliberate attention through Flutter's semantics tree. Because I also build in React and React Native, I can judge when Flutter is the right tool and when a React web front end is the better choice. That is the kind of decision Canonical's teams make as they bring Flutter to desktop and web.</p>
 
 <!-- ============================================================ -->
@@ -89,7 +89,7 @@
   <li><b>Insurance software</b> for Cisco Webex: complex, data-heavy interfaces for insurers modernising their operations.</li>
   <li><b>Enterprise work management</b> at Adobe Workfront, where I am Dev Lead for Document Management.</li>
   <li><b>Advertising technology</b> at Hudson MX: a cloud-based media-buying platform where I joined mid-project and became productive quickly in an unfamiliar codebase.</li>
-  <li><b>My own products</b>: an expense-splitting product in Flutter (web, Android, iOS) with a Node.js REST back end, and a React Native crypto markets and portfolio app.</li>
+  <li><b>My own products</b>: an bill-splitting app in Flutter (web, Android, iOS) with a Node.js REST back end, and a React Native crypto markets and portfolio app.</li>
   <li><b>Websites</b> built with WordPress and PHP.</li>
 </ul>
 
@@ -116,7 +116,7 @@
 <ul>
   <li><b>Adobe Workfront – Document Management (2024–present), Dev Lead.</b> Workfront is used by many of the world's largest brands, and Document Management ships regular releases to all of them. I drive planning and delivery, unblock engineers, review code, and keep developers, QA and design aligned. I am the first point of contact when a critical production issue needs diagnosing.</li>
   <li><b>Fiserv payments application (2022–2023), front-end owner from the first commit.</b> I designed the architecture, set up the Angular workspace, implemented the core features and multi-language support, and set the patterns the team followed through its later releases.</li>
-  <li><b>My expense-splitting product (Flutter, Node.js), sole owner.</b> I designed, built and continue to release it on three platforms (web, Android and iOS) to real users. I own the product decisions, architecture, back end, releases and support.</li>
+  <li><b>My bill-splitting app (Flutter, Node.js), sole owner.</b> I designed, built and continue to release it on three platforms (web, Android and iOS) to real users. I own the product decisions, architecture, back end, releases and support.</li>
 </ul>
 
 <h3>What is your most senior role in a software engineering organisation?</h3>
